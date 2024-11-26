@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tst</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" ></script> <!--blibioteca-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header Lateral -->
+  <div id="lateral-header">
+      <h1>Relatorios</h1>
+      <ul>
+          <li><a href="dados.html">Dados</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="info.html">Informações</a></li>
+         
+      </ul>
+  </div>
+  <!-- Conteúdo principal -->
+    <br><br><br><br><br><br>
+    <!-- gera relatórios-->
+    <main>
+      <div id="content"> 
+      <section class="content">
+    <div id="form-container">
+      <h1></h1> <!--nome -->
+      <form id="report-form">
+          <label for="nome">Produto:</label>
+          <input type="text" id="nome" required>
+          <label for="data">Data:</label>
+          <input type="date" id="data" required>
+          <label for="valor">Valor:</label>
+          <input type="text" id="valor" name="valor" required maxlength="4" pattern="\d{4}" title="ultrapassou">
+          <label for="qntd">Quantidade:</label>
+          <input type="text" id="qntd" name="qntd" required maxlength="2" pattern="\d{2}" title="ultrapassou">
+          <button type="submit">Gerar Relatório</button>
+          <button id="generate-pdf" class="submit-btn"> Gerar pdf </button>
+      </form>
+    </div>
+    <div id="relatorio-container">
+      <h2>Relatório Gerado</h2>
+      <pre id="relatorio"></pre>
+    </div>
+    <br><br><br><br><br><br>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
